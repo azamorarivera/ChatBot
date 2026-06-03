@@ -1,31 +1,44 @@
-
-import "../estilos/Inicio.css" // ajusta la ruta según donde lo guardes
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import "../estilos/Inicio.css"
 
 export default function Inicio() {
   const navigate = useNavigate()
-  
+
   return (
-    
     <div className="inicio-container">
       
-      <img src="/img/fondo.png" alt="Inicio ChatBot MERN" className="fondo-inicio"/>
+      <div className="inicio-hero">
+        <h1 className="inicio-titulo">¡Bienvenido a <span>Chatbot MERN</span>!</h1>
+        <p className="inicio-subtitulo">Tu asistente inteligente está aquí para ayudarte.<br/>
+        Inicia sesión, regístrate o comienza a chatear como invitado.</p>
+        <div className="inicio-icono">💬</div>
+      </div>
 
-      <button className="boton-img boton-chat" onClick={() => navigate("/chatPublico")}>
-      <img src="/img/chatear.png" alt="Chatear"/>
-      </button>
+      <p className="inicio-pregunta">¿Qué quieres hacer?</p>
 
-      <button className="boton-img boton-login" onClick={() => navigate("/Login")}>
-      <img src="/img/iniciar.png" alt="Login"/>
-      </button>
-      
-     < button className="boton-img boton-registro" onClick={() => navigate("/registro")}>
-      <img src="/img/registrarse.png" alt="Registro"/>
-      </button>
+      <div className="inicio-botones">
+        <div className="inicio-card" onClick={() => navigate("/chatPublico")}>
+          <span className="card-icono">🗨️</span>
+          <h3>Usar el Chat</h3>
+          <p>Comienza a conversar con el chatbot</p>
+          <button className="btn-verde">Chatear</button>
+        </div>
 
-    
+        <div className="inicio-card" onClick={() => navigate("/Login")}>
+          <span className="card-icono">🔒</span>
+          <h3>Iniciar sesión</h3>
+          <p>Accede a tu cuenta</p>
+          <button className="btn-verde">Iniciar sesión</button>
+        </div>
+
+        <div className="inicio-card" onClick={() => navigate("/registro")}>
+          <span className="card-icono">👤</span>
+          <h3>Registrarse</h3>
+          <p>Crea una cuenta nueva</p>
+          <button className="btn-verde">Registrarse</button>
+        </div>
+      </div>
+
     </div>
-    
   );
-  
 }

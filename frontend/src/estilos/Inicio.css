@@ -1,47 +1,100 @@
 .inicio-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0a0f0a;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0f0a 0%, #0d2010 50%, #0a0f0a 100%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  padding: 40px 20px;
 }
 
-.fondo-inicio {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3; /* la imagen se ve tenue para que resalte el color verde */
-  filter: hue-rotate(90deg) saturate(1.5); /* tono verdoso a la imagen */
+.inicio-hero {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.boton-img {
-  position: absolute;
-  background: rgba(0, 255, 100, 0.15);
-  border: 2px solid #00ff64;
-  border-radius: 12px;
-  padding: 10px;
+.inicio-titulo {
+  color: #e0f0e0;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.inicio-titulo span {
+  color: #00cc66;
+}
+
+.inicio-subtitulo {
+  color: #6aab6a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.inicio-icono {
+  font-size: 5rem;
+  margin: 20px 0;
+  filter: drop-shadow(0 0 20px #00cc66);
+}
+
+.inicio-pregunta {
+  color: #e0f0e0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.inicio-botones {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inicio-card {
+  background: rgba(0, 204, 102, 0.05);
+  border: 1px solid #00cc66;
+  border-radius: 16px;
+  padding: 24px;
+  width: 220px;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 12px #00ff6444;
+  box-shadow: 0 0 12px rgba(0, 204, 102, 0.1);
 }
 
-.boton-img:hover {
-  background: rgba(0, 255, 100, 0.3);
-  box-shadow: 0 0 24px #00ff64aa;
-  transform: scale(1.05);
+.inicio-card:hover {
+  background: rgba(0, 204, 102, 0.12);
+  box-shadow: 0 0 24px rgba(0, 204, 102, 0.3);
+  transform: translateY(-4px);
 }
 
-.boton-img img {
-  width: 80px;
-  height: auto;
-  filter: drop-shadow(0 0 6px #00ff64);
+.card-icono {
+  font-size: 2rem;
 }
 
-/* Posición de cada botón — ajusta según donde están en tu diseño */
-.boton-chat  { bottom: 30%; left: 20%; }
-.boton-login { bottom: 30%; left: 48%; }
-.boton-registro { bottom: 30%; right: 20%; }
+.inicio-card h3 {
+  color: #e0f0e0;
+  margin: 10px 0 6px;
+}
+
+.inicio-card p {
+  color: #6aab6a;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.btn-verde {
+  background: linear-gradient(135deg, #00cc66, #00994d);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-verde:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 12px rgba(0, 204, 102, 0.5);
+}
